@@ -4,9 +4,9 @@
     <reapack name="denoiser_reaperianigui.jsfx" type="effect" desc="tevio_denoiser">
       <version name="2018/06/21" author="Tevio" time="2018-06-21T20:10:29Z">
         <source>https://github.com/TevioVST/teviojsfx/raw/278710c6a705be7ae3e1efce19b770551716583e/denoiser/denoiser_reaperianigui.jsfx</source>
-		<source file="dentevback.png">https://github.com/TevioVST/teviojsfx/raw/713b390fa8f52e05b89225d7c560cd9131f2a64a/denoiser/dentevback.png</source>
-		<source file="knob.png">https://github.com/TevioVST/teviojsfx/raw/713b390fa8f52e05b89225d7c560cd9131f2a64a/denoiser/knob.png</source>
-		<source file="knobred.png">https://github.com/TevioVST/teviojsfx/raw/713b390fa8f52e05b89225d7c560cd9131f2a64a/denoiser/knobred.png</source>
+		<source file="dentevback.png">https://github.com/TevioVST/teviojsfx/raw/278710c6a705be7ae3e1efce19b770551716583e/denoiser/dentevback.png</source>
+		<source file="knob.png">https://github.com/TevioVST/teviojsfx/raw/278710c6a705be7ae3e1efce19b770551716583e/denoiser/knob.png</source>
+		<source file="knobred.png">https://github.com/TevioVST/teviojsfx/raw/278710c6a705be7ae3e1efce19b770551716583e/denoiser/knobred.png</source>
       </version>
     </reapack>
   </category>
