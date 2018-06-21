@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="TevioJSFX" commit="fe8e4d515824a9fb0462ebca44c9a815589c4189">
+<index version="1" name="TevioJSFX" commit="cb22ad4120feecd4ff22bdf8efee0d9a6ebf7d14">
   <category name="denoiser">
     <reapack name="denoiser_reaperianigui.jsfx" type="effect" desc="tevio_denoiser">
       <version name="2018/06/21" author="Tevio" time="2018-06-21T20:10:29Z">
-        <source>https://github.com/TevioVST/teviojsfx/raw/fe8e4d515824a9fb0462ebca44c9a815589c4189/denoiser/denoiser_reaperianigui.jsfx</source>
-		<source file="dentevback.png">https://github.com/TevioVST/teviojsfx/raw/fe8e4d515824a9fb0462ebca44c9a815589c4189/denoiser/dentevback.png</source>
-		<source file="knob.png">https://github.com/TevioVST/teviojsfx/raw/fe8e4d515824a9fb0462ebca44c9a815589c4189/denoiser/knob.png</source>
-		<source file="knobred.png">https://github.com/TevioVST/teviojsfx/raw/fe8e4d515824a9fb0462ebca44c9a815589c4189/denoiser/knobred.png</source>
+        <source>https://github.com/TevioVST/teviojsfx/raw/cb22ad4120feecd4ff22bdf8efee0d9a6ebf7d14/denoiser/denoiser_reaperianigui.jsfx</source>
       </version>
     </reapack>
   </category>
