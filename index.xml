@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="TevioJSFX" commit="289d92ef49328c605a58973d1839149da28a2774">
+<index version="1" name="TevioJSFX" commit="1fe292f98777a9fc6a605ace6f2a58cbdeaa8f99">
   <category name="denoiser">
     <reapack name="denoiser_reaperianigui.jsfx" type="effect" desc="tevio_denoiser">
       <version name="2018/06/21" author="Tevio" time="2018-06-21T20:10:29Z">
