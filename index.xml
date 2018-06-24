@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index version="1" name="TevioJSFX" commit="981dfc2a55162b1c9ee4f53cd9dbe9e45b0ff6bb">
+  <category name="denoiser">
+    <reapack name="denoiser_reaperianigui.jsfx" type="effect" desc="tevio_denoiser">
+      <version name="2018/06/21" author="Tevio" time="2018-06-21T20:10:29Z">
+        <source>https://github.com/TevioVST/teviojsfx/raw/278710c6a705be7ae3e1efce19b770551716583e/denoiser/denoiser_reaperianigui.jsfx</source>
+      </version>
+      <version name="2018/06/23" author="Tevio" time="2018-06-23T15:49:18Z">
+        <source>https://github.com/TevioVST/teviojsfx/raw/289d92ef49328c605a58973d1839149da28a2774/denoiser/denoiser_reaperianigui.jsfx</source>
+      </version>
+    </reapack>
+  </category>
+</index>
