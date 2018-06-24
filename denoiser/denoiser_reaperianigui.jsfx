@@ -1,12 +1,12 @@
-//====================================================================== 
-// 
-//* Version: 2018/06/23 
-//* Author: Tevio
-//* Author URI: 
-//* Repository: 
-//* Repository URI: 
-//* TevioJSFX denoiser/dentevback.png
-//====================================================================== 
+/*
+ *Version: 2018/06/23 
+ *Author: Tevio
+ *Author URI: 
+ *Repository: 
+ *Repository URI:
+ *Provides:
+ * TevioJSFX denoiser/dentevback.png
+ */
 desc:tevio_denoiser
 
 filename:0,dentevback.png
