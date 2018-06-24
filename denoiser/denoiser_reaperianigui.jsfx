@@ -1,11 +1,13 @@
 desc:tevio_denoiser
 Author: Tevio
 version: 2018/06/24 
+changelog: Initial release
 Author URI: 
 Repository: 
 Repository URI:
 Provides: Data/*
 
+*/
 
 
 filename:0,Data/dentevback.png
