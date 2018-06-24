@@ -1,12 +1,12 @@
-/*
- *Version: 2018/06/23 
- *Author: Tevio
- *Author URI: 
- *Repository: 
- *Repository URI:
- *Provides: "dentevback.png" Data/dentevback.png
- */
 desc:tevio_denoiser
+Author: Tevio
+version: 2018/06/23 
+Author URI: 
+Repository: 
+Repository URI:
+Provides: Data/*
+
+
 
 filename:0,Data/dentevback.png
 filename:1,Data/knob.png
