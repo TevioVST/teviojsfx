@@ -4,14 +4,13 @@
  *Author URI: 
  *Repository: 
  *Repository URI:
- *Provides:
- * teviojsfx dentevback.png
+ *Provides: [data]Data/dentevback.png
  */
 desc:tevio_denoiser
 
-filename:0,dentevback.png
-filename:1,knob.png
-filename:2,knobred.png
+filename:0,Data/dentevback.png
+filename:1,Data/knob.png
+filename:2,Data/knobred.png
 
 slider1:-60<-60,0,0.1>-Threshold (dB)
 slider5:612.1<20,1000,1>-Release (ms)
