@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="TevioJSFX" commit="bccc6a09d1105adcf90ffc4b075c46562c8a1e60">
+<index version="1" name="TevioJSFX" commit="7d17bfedffd260eed2cd06361f355ed1939db6fe">
+  <category name="compressor">
+    <reapack name="Tevio_compressor.jsfx" type="effect" desc="Tevio Compressor">
+      <version name="2018/06/25" author="Tevio" time="2018-06-25T12:46:24Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source>https://github.com/TevioVST/teviojsfx/raw/7d17bfedffd260eed2cd06361f355ed1939db6fe/compressor/Tevio_compressor.jsfx</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="console">
+    <reapack name="Tevio_console.jsfx" type="effect" desc="Tevio Console">
+      <version name="2018/06/25" author="Tevio" time="2018-06-25T12:46:24Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source>https://github.com/TevioVST/teviojsfx/raw/7d17bfedffd260eed2cd06361f355ed1939db6fe/console/Tevio_console.jsfx</source>
+      </version>
+    </reapack>
+  </category>
   <category name="denoiser">
     <reapack name="denoiser_reaperianigui.jsfx" type="effect" desc="tevio_denoiser">
       <version name="2018/06/21" author="Tevio" time="2018-06-21T20:10:29Z">
