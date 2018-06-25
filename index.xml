@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="TevioJSFX" commit="133867469cea6d49feae65f429575fb076385b31">
+<index version="1" name="TevioJSFX" commit="bccc6a09d1105adcf90ffc4b075c46562c8a1e60">
   <category name="denoiser">
     <reapack name="denoiser_reaperianigui.jsfx" type="effect" desc="tevio_denoiser">
       <version name="2018/06/21" author="Tevio" time="2018-06-21T20:10:29Z">
@@ -20,6 +20,14 @@
         <source file="Data/dentevback.png">https://github.com/TevioVST/teviojsfx/raw/133867469cea6d49feae65f429575fb076385b31/denoiser/Data/dentevback.png</source>
         <source file="Data/knob.png">https://github.com/TevioVST/teviojsfx/raw/133867469cea6d49feae65f429575fb076385b31/denoiser/Data/knob.png</source>
         <source file="Data/knobred.png">https://github.com/TevioVST/teviojsfx/raw/133867469cea6d49feae65f429575fb076385b31/denoiser/Data/knobred.png</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="muterec">
+    <reapack name="Tevio_MuteRec.jsfx" type="effect" desc="Tevio Auto Mute Recording State">
+      <version name="2018/06/25" author="Tevio" time="2018-06-25T10:37:02Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source>https://github.com/TevioVST/teviojsfx/raw/bccc6a09d1105adcf90ffc4b075c46562c8a1e60/muterec/Tevio_MuteRec.jsfx</source>
       </version>
     </reapack>
   </category>
