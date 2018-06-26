@@ -1,6 +1,6 @@
 desc:Tevio Auto Mute Recording State
 Author: Tevio
-version: 2018/06/25
+version: 2018/06/26
 changelog: Initial release
 Author URI: 
 Repository: 
