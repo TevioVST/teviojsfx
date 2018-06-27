@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="TevioJSFX" commit="3eaed46cdf2dd256505479707a2560a06fd745ed">
+<index version="1" name="TevioJSFX" commit="cb27bf81201859560dc1bf9710c88c79698f09b4">
   <category name="compressor">
     <reapack name="Tevio_compressor.jsfx" type="effect" desc="Tevio Compressor">
       <version name="2018/06/25" author="Tevio" time="2018-06-25T12:46:24Z">
@@ -50,6 +50,22 @@
         <source file="Data/dentevback.png">https://github.com/TevioVST/teviojsfx/raw/7b348ec8f1bd18a4888ed608d406656f4e7d17d6/denoiser/Data/dentevback.png</source>
         <source file="Data/knob.png">https://github.com/TevioVST/teviojsfx/raw/7b348ec8f1bd18a4888ed608d406656f4e7d17d6/denoiser/Data/knob.png</source>
         <source file="Data/knobred.png">https://github.com/TevioVST/teviojsfx/raw/7b348ec8f1bd18a4888ed608d406656f4e7d17d6/denoiser/Data/knobred.png</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="muterec">
+    <reapack name="Tevio_MuteRec.jsfx" type="effect" desc="Tevio Auto Mute Recording State">
+      <version name="2018/06/26" author="Tevio" time="2018-06-27T07:29:07Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source>https://github.com/TevioVST/teviojsfx/raw/cb27bf81201859560dc1bf9710c88c79698f09b4/muterec/Tevio_MuteRec.jsfx</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="reverb">
+    <reapack name="Tevio_reverb.jsfx" type="effect" desc="Tevio Dual Reverb">
+      <version name="2018/06/27" author="Tevio" time="2018-06-27T07:29:07Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source>https://github.com/TevioVST/teviojsfx/raw/cb27bf81201859560dc1bf9710c88c79698f09b4/reverb/Tevio_reverb.jsfx</source>
       </version>
     </reapack>
   </category>
