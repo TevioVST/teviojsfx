@@ -1,14 +1,14 @@
 desc:Tevio Denoiser
 Author: Tevio
-version: 2018/07/03.1
-changelog: Fix Knob sensibility, Add Reset Knob right mouse click, Fix Sens.
+version: 2018/07/03.2
+changelog: Fix Knob sensibility, Add Reset Knob right mouse click, Fix Sens and name.
 Author URI: 
 Repository: 
 Repository URI:
 Provides: Data/*
 
 */
-
+EffectName: Tevio Denoiser
 
 filename:0,Data/dentevback.png
 filename:1,Data/knob.png
