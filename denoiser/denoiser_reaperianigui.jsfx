@@ -1,7 +1,7 @@
 desc:Tevio Denoiser
 Author: Tevio
-version: 2018/06/25
-changelog: Initial release
+version: 2018/07/03
+changelog: Fix Knob sensibility, Add Reset Knob right mouse click.
 Author URI: 
 Repository: 
 Repository URI:
