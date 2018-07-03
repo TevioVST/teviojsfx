@@ -1,7 +1,7 @@
 desc:Tevio Denoiser
 Author: Tevio
-version: 2018/07/03
-changelog: Fix Knob sensibility, Add Reset Knob right mouse click.
+version: 2018/07/03.1
+changelog: Fix Knob sensibility, Add Reset Knob right mouse click, Fix Sens.
 Author URI: 
 Repository: 
 Repository URI:
@@ -164,10 +164,11 @@ gfx_r=gfx_g=gfx_b=0;
 mouseon == 1 ? (
   mouse_cap > 0 ? (
   	
-    mouse_y > saveY ? slider1 = max(-60,slider1 - (abs(slasty - saveY)/2));
-    mouse_y < saveY ? slider1 = min(0,slider1 + (abs(slasty - saveY)/2));
+    mouse_y > saveY ? slider1 = max(-60,slider1 - (abs(slasty - saveY)/3));
+    mouse_y < saveY ? slider1 = min(0,slider1 + (abs(slasty - saveY)/3));
     mouse_cap == 2 ? slider1 = -60;
- slasty = saveY; ):(
+ slasty = saveY; 
+ saveY=0;):(
     slider1 = doMouseWheel(slider1,-60,0,val);
   );
 );
@@ -178,10 +179,11 @@ doCenterText(74,110, slider1);
 //do the Gain knob
 mouseon == 2 ? (
   mouse_cap > 0 ? (
-    mouse_y > saveY ? slider6 = max(-20,slider6 -(abs(slasty - saveY)/2));
-    mouse_y < saveY ? slider6 = min(20,slider6 +(abs(slasty - saveY)/2));
+    mouse_y > saveY ? slider6 = max(-20,slider6 -(abs(slasty - saveY)/5));
+    mouse_y < saveY ? slider6 = min(20,slider6 +(abs(slasty - saveY)/5));
     mouse_cap == 2 ? slider6 = 0;
-  ):(
+  slasty = saveY;
+  saveY=0;):(
   slider6 = doMouseWheel(slider6,-20,20,val);
   );
 );
@@ -193,10 +195,11 @@ doCenterText(188,110, slider6);
 //do the Release slider Rotation
 mouseon == 6 ? (
   mouse_cap > 0 ? (
-     mouse_y > saveY ? slider5 = max(20,slider5 -(abs(slasty - saveY)/2));
-    mouse_y < saveY ? slider5 = min(1000,slider5 +(abs(slasty - saveY)/2));
+     mouse_y > saveY ? slider5 = max(20,slider5 -(abs(slasty - saveY)*5));
+    mouse_y < saveY ? slider5 = min(1000,slider5 +(abs(slasty - saveY)*5));
     mouse_cap == 2 ? slider5 = 612.1;  
-  ):(
+  slasty = saveY;
+  saveY=0;):(
     slider5 = doMouseWheel(slider5,20,1000,val);
   );
 );
