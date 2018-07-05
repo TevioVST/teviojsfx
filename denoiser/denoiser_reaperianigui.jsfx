@@ -91,6 +91,7 @@ function doslidercode()(
   
 
 @sample
+
   ospl0 = spl0;
   ospl1 = spl1;
   aspl0 = abs(spl0);
@@ -150,6 +151,8 @@ gfx_blit(0,0.5,0,0,0,448,210,0,0,448,210,0,0);
 
 //determine which control we're on (if any)
 mouse_cap == 0 ? (
+	slastyt = 0;	
+	slasty = 0;
   mouse_x > 22 && mouse_x < 100 && mouse_y > 30 && mouse_y < 102 ? (mouseon = 1; val = 1.5);
   mouse_x > 160 && mouse_x < 217 && mouse_y > 37 && mouse_y < 93 ? (mouseon = 2; val = 1);
   
@@ -162,15 +165,15 @@ mouse_cap == 0 ? (
 gfx_r=gfx_g=gfx_b=0;
 //do the Threshold knob
 mouseon == 1 ? (
-  mouse_cap > 0 ? (
-  	
-    mouse_y > saveY ? slider1 = max(-60,slider1 - (abs(slasty - saveY)/3));
-    mouse_y < saveY ? slider1 = min(0,slider1 + (abs(slasty - saveY)/3));
+  mouse_cap > 0 ? ( 
+  	diff = (abs(slastyt - saveY)/3);
+    mouse_y > saveY ? slider1 = max(-60,slider1 - diff);
+    mouse_y < saveY ? slider1 = min(0,slider1 + diff);
     mouse_cap == 2 ? slider1 = -60;
- slasty = saveY; 
- saveY=0;):(
+):(
     slider1 = doMouseWheel(slider1,-60,0,val);
   );
+    slastyt = saveY; saveY = mouse_y;
 );
 gfx_blit(2,1,slider1 * 0.075-1.65,0,0,81,81,44,36,59,59,0,0);
 doCenterText(74,110, slider1);
@@ -179,14 +182,17 @@ doCenterText(74,110, slider1);
 //do the Gain knob
 mouseon == 2 ? (
   mouse_cap > 0 ? (
-    mouse_y > saveY ? slider6 = max(-20,slider6 -(abs(slasty - saveY)/5));
-    mouse_y < saveY ? slider6 = min(20,slider6 +(abs(slasty - saveY)/5));
+  	diff = (abs(slasty - saveY)/5);
+    mouse_y > saveY ? slider6 = max(-20,slider6 - diff);
+    mouse_y < saveY ? slider6 = min(20,slider6 + diff);
     mouse_cap == 2 ? slider6 = 0;
-  slasty = saveY;
-  saveY=0;):(
+ 
+ ):(
   slider6 = doMouseWheel(slider6,-20,20,val);
   );
+   slasty = saveY; saveY = mouse_y;
 );
+
 gfx_blit(1,1,slider6 * 0.115-3.9,0,0,81,81,160,36,59,59,0,0);
 doCenterText(188,110, slider6);
 
@@ -198,11 +204,13 @@ mouseon == 6 ? (
      mouse_y > saveY ? slider5 = max(20,slider5 -(abs(slasty - saveY)*5));
     mouse_y < saveY ? slider5 = min(1000,slider5 +(abs(slasty - saveY)*5));
     mouse_cap == 2 ? slider5 = 612.1;  
-  slasty = saveY;
-  saveY=0;):(
+
+ ):(
     slider5 = doMouseWheel(slider5,20,1000,val);
   );
-);
+    slasty = saveY; saveY = mouse_y;
+    );
+
 gfx_blit(1,1,slider5 * 0.004591,0,0,81,81,272,36,59,59,0,0);
 doCenterText(300,110, relslider5);
 
@@ -229,14 +237,14 @@ doCenterText(388,89, slider5); */
   gfx_y=150;
   gfx_x=max(425 + log10(gr_meter)*xscale,25);
   gfx_rectto(425,170);
-
+/*
   gfx_r=gfx_g=gfx_b=0;
   gfx_a=1;
   gfx_x=390; gfx_y=176;
- //doCenterText(388,180, spl0);
-  //gfx_drawnumber(log10(gr_meter)*(-1)*20,1);
-
+ doCenterText(388,180, spl0);
+  gfx_drawnumber(log10(gr_meter)*(-1)*20,1);
+*/
 //Call function to execute code that was originally in @slider section
   doslidercode();
   
-  saveY = mouse_y;
+ 
