@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="TevioJSFX" commit="cb60c7300a0e1ee452926e21a0de3d891c220c57">
+<index version="1" name="TevioJSFX" commit="e71cf2647ed2f48c34cb6f8b17cc7aa3930ffca9">
   <category name="compressor">
     <reapack name="Tevio_compressor.jsfx" type="effect" desc="Tevio Compressor">
       <version name="2018/06/25" author="Tevio" time="2018-06-25T12:46:24Z">
@@ -17,74 +17,13 @@
     </reapack>
   </category>
   <category name="denoiser">
-    <reapack name="denoiser_reaperianigui.jsfx" type="effect" desc="Tevio Denoiser">
-      <version name="2018/06/21" author="Tevio" time="2018-06-21T20:10:29Z">
-        <source>https://github.com/TevioVST/teviojsfx/raw/278710c6a705be7ae3e1efce19b770551716583e/denoiser/denoiser_reaperianigui.jsfx</source>
-      </version>
-      <version name="2018/06/23" author="Tevio" time="2018-06-23T15:49:18Z">
-        <source>https://github.com/TevioVST/teviojsfx/raw/289d92ef49328c605a58973d1839149da28a2774/denoiser/denoiser_reaperianigui.jsfx</source>
-      </version>
-      <version name="2018/06/24" author="Tevio" time="2018-06-24T13:49:48Z">
-        <source>https://github.com/TevioVST/teviojsfx/raw/bab2e6f1c8b863aad9219c2af4e10977ea1d5d1d/denoiser/denoiser_reaperianigui.jsfx</source>
-        <source file="Data/dentevback.png">https://github.com/TevioVST/teviojsfx/raw/bab2e6f1c8b863aad9219c2af4e10977ea1d5d1d/denoiser/Data/dentevback.png</source>
-        <source file="Data/knob.png">https://github.com/TevioVST/teviojsfx/raw/bab2e6f1c8b863aad9219c2af4e10977ea1d5d1d/denoiser/Data/knob.png</source>
-        <source file="Data/knobred.png">https://github.com/TevioVST/teviojsfx/raw/bab2e6f1c8b863aad9219c2af4e10977ea1d5d1d/denoiser/Data/knobred.png</source>
-      </version>
-      <version name="2018/06/24.1" author="Tevio" time="2018-06-24T14:02:30Z">
-        <changelog><![CDATA[Initial release]]></changelog>
-        <source>https://github.com/TevioVST/teviojsfx/raw/133867469cea6d49feae65f429575fb076385b31/denoiser/denoiser_reaperianigui.jsfx</source>
-        <source file="Data/dentevback.png">https://github.com/TevioVST/teviojsfx/raw/133867469cea6d49feae65f429575fb076385b31/denoiser/Data/dentevback.png</source>
-        <source file="Data/knob.png">https://github.com/TevioVST/teviojsfx/raw/133867469cea6d49feae65f429575fb076385b31/denoiser/Data/knob.png</source>
-        <source file="Data/knobred.png">https://github.com/TevioVST/teviojsfx/raw/133867469cea6d49feae65f429575fb076385b31/denoiser/Data/knobred.png</source>
-      </version>
-      <version name="2018/06/24.2" author="Tevio" time="2018-06-25T12:48:41Z">
-        <changelog><![CDATA[Initial release]]></changelog>
-        <source>https://github.com/TevioVST/teviojsfx/raw/0534c84a5afb60cc839ff7ae7098904a7aa2d6bd/denoiser/denoiser_reaperianigui.jsfx</source>
-        <source file="Data/dentevback.png">https://github.com/TevioVST/teviojsfx/raw/0534c84a5afb60cc839ff7ae7098904a7aa2d6bd/denoiser/Data/dentevback.png</source>
-        <source file="Data/knob.png">https://github.com/TevioVST/teviojsfx/raw/0534c84a5afb60cc839ff7ae7098904a7aa2d6bd/denoiser/Data/knob.png</source>
-        <source file="Data/knobred.png">https://github.com/TevioVST/teviojsfx/raw/0534c84a5afb60cc839ff7ae7098904a7aa2d6bd/denoiser/Data/knobred.png</source>
-      </version>
-      <version name="2018/06/25" author="Tevio" time="2018-06-25T12:50:40Z">
-        <changelog><![CDATA[Initial release]]></changelog>
-        <source>https://github.com/TevioVST/teviojsfx/raw/500529f789904994f1884c2bec7289308d1c66af/denoiser/denoiser_reaperianigui.jsfx</source>
-        <source file="Data/dentevback.png">https://github.com/TevioVST/teviojsfx/raw/500529f789904994f1884c2bec7289308d1c66af/denoiser/Data/dentevback.png</source>
-        <source file="Data/knob.png">https://github.com/TevioVST/teviojsfx/raw/500529f789904994f1884c2bec7289308d1c66af/denoiser/Data/knob.png</source>
-        <source file="Data/knobred.png">https://github.com/TevioVST/teviojsfx/raw/500529f789904994f1884c2bec7289308d1c66af/denoiser/Data/knobred.png</source>
-      </version>
-      <version name="2018/07/03" author="Tevio" time="2018-07-03T19:03:31Z">
-        <changelog><![CDATA[Fix Knob sensibility, Add Reset Knob right mouse click.]]></changelog>
-        <source>https://github.com/TevioVST/teviojsfx/raw/72810a94958b39f3bb4d63abd5e9f141e1793229/denoiser/denoiser_reaperianigui.jsfx</source>
-        <source file="Data/dentevback.png">https://github.com/TevioVST/teviojsfx/raw/72810a94958b39f3bb4d63abd5e9f141e1793229/denoiser/Data/dentevback.png</source>
-        <source file="Data/knob.png">https://github.com/TevioVST/teviojsfx/raw/72810a94958b39f3bb4d63abd5e9f141e1793229/denoiser/Data/knob.png</source>
-        <source file="Data/knobred.png">https://github.com/TevioVST/teviojsfx/raw/72810a94958b39f3bb4d63abd5e9f141e1793229/denoiser/Data/knobred.png</source>
-      </version>
-      <version name="2018/07/03.1" author="Tevio" time="2018-07-03T19:30:03Z">
-        <changelog><![CDATA[Fix Knob sensibility, Add Reset Knob right mouse click, Fix Sens.]]></changelog>
-        <source>https://github.com/TevioVST/teviojsfx/raw/52650f785181e056d4724dd6a32ebd369a3ec60e/denoiser/denoiser_reaperianigui.jsfx</source>
-        <source file="Data/dentevback.png">https://github.com/TevioVST/teviojsfx/raw/52650f785181e056d4724dd6a32ebd369a3ec60e/denoiser/Data/dentevback.png</source>
-        <source file="Data/knob.png">https://github.com/TevioVST/teviojsfx/raw/52650f785181e056d4724dd6a32ebd369a3ec60e/denoiser/Data/knob.png</source>
-        <source file="Data/knobred.png">https://github.com/TevioVST/teviojsfx/raw/52650f785181e056d4724dd6a32ebd369a3ec60e/denoiser/Data/knobred.png</source>
-      </version>
-      <version name="2018/07/03.2" author="Tevio" time="2018-07-03T19:34:35Z">
-        <changelog><![CDATA[Fix Knob sensibility, Add Reset Knob right mouse click, Fix Sens and name.]]></changelog>
-        <source>https://github.com/TevioVST/teviojsfx/raw/d26be68656b03736eb66cf2b761514d96be03708/denoiser/denoiser_reaperianigui.jsfx</source>
-        <source file="Data/dentevback.png">https://github.com/TevioVST/teviojsfx/raw/d26be68656b03736eb66cf2b761514d96be03708/denoiser/Data/dentevback.png</source>
-        <source file="Data/knob.png">https://github.com/TevioVST/teviojsfx/raw/d26be68656b03736eb66cf2b761514d96be03708/denoiser/Data/knob.png</source>
-        <source file="Data/knobred.png">https://github.com/TevioVST/teviojsfx/raw/d26be68656b03736eb66cf2b761514d96be03708/denoiser/Data/knobred.png</source>
-      </version>
-      <version name="2018/07/05" author="Tevio" time="2018-07-05T12:33:39Z">
-        <changelog><![CDATA[Fix Knob sensibility, update backgrond, update label knob.]]></changelog>
-        <source>https://github.com/TevioVST/teviojsfx/raw/0049f59b31b90a16c1d06909643d588ff0419391/denoiser/denoiser_reaperianigui.jsfx</source>
-        <source file="Data/dentevback.png">https://github.com/TevioVST/teviojsfx/raw/0049f59b31b90a16c1d06909643d588ff0419391/denoiser/Data/dentevback.png</source>
-        <source file="Data/knob.png">https://github.com/TevioVST/teviojsfx/raw/0049f59b31b90a16c1d06909643d588ff0419391/denoiser/Data/knob.png</source>
-        <source file="Data/knobred.png">https://github.com/TevioVST/teviojsfx/raw/0049f59b31b90a16c1d06909643d588ff0419391/denoiser/Data/knobred.png</source>
-      </version>
-      <version name="2018/07/09" author="Tevio" time="2018-07-10T08:31:00Z">
-        <changelog><![CDATA[Official Release 1.0]]></changelog>
-        <source>https://github.com/TevioVST/teviojsfx/raw/cb60c7300a0e1ee452926e21a0de3d891c220c57/denoiser/denoiser_reaperianigui.jsfx</source>
-        <source file="Data/dentevback.png">https://github.com/TevioVST/teviojsfx/raw/cb60c7300a0e1ee452926e21a0de3d891c220c57/denoiser/Data/dentevback.png</source>
-        <source file="Data/knob.png">https://github.com/TevioVST/teviojsfx/raw/cb60c7300a0e1ee452926e21a0de3d891c220c57/denoiser/Data/knob.png</source>
-        <source file="Data/knobred.png">https://github.com/TevioVST/teviojsfx/raw/cb60c7300a0e1ee452926e21a0de3d891c220c57/denoiser/Data/knobred.png</source>
+    <reapack name="levamerda_reaperianigui.jsfx" type="effect" desc="Tevio Levammerda">
+      <version name="2018/09/17" author="Tevio" time="2018-09-17T13:45:23Z">
+        <changelog><![CDATA[Fix Threshold, update background, update Name]]></changelog>
+        <source>https://github.com/TevioVST/teviojsfx/raw/e71cf2647ed2f48c34cb6f8b17cc7aa3930ffca9/denoiser/levamerda_reaperianigui.jsfx</source>
+        <source file="Data/Levamerda.GUI.png">https://github.com/TevioVST/teviojsfx/raw/e71cf2647ed2f48c34cb6f8b17cc7aa3930ffca9/denoiser/Data/Levamerda.GUI.png</source>
+        <source file="Data/knob.png">https://github.com/TevioVST/teviojsfx/raw/e71cf2647ed2f48c34cb6f8b17cc7aa3930ffca9/denoiser/Data/knob.png</source>
+        <source file="Data/knobred.png">https://github.com/TevioVST/teviojsfx/raw/e71cf2647ed2f48c34cb6f8b17cc7aa3930ffca9/denoiser/Data/knobred.png</source>
       </version>
     </reapack>
   </category>
