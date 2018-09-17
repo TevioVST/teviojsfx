@@ -1,16 +1,16 @@
-desc:Tevio Denoiser
+desc:Tevio Levammerda
 Author: Tevio
-version: 2018/07/09
-changelog: Official Release 1.0
+version: 2018/09/17
+changelog: Fix Threshold, update background, update Name
 Author URI: 
 Repository: 
 Repository URI:
 Provides: Data/*
 
 */
-EffectName: Tevio Denoiser
+EffectName: Tevio Levammerda
 
-filename:0,Data/dentevback.png
+filename:0,Data/Levamerda.GUI.png
 filename:1,Data/knob.png
 filename:2,Data/knobred.png
 
@@ -26,6 +26,8 @@ out_pin:right output
 @init
 
 //==============================================================
+// TO THE USER: IF YOU WANT TO CHANGE THE BACKGROUND COLOUR OF THE GUI
+// EDIT THE FOLLOWING RED, GREEN AND BLUE VALUES (0-255)
   cRed=68;
   cGreen=68;              
   cBlue=68;                
@@ -38,14 +40,14 @@ out_pin:right output
   ratio=0;
   cratio=0;
   rundb=0;
-  oltredb=0;
+  overdb=0;
   ratatcoef = exp(-1/(0.00001 * srate));
   ratrelcoef = exp(-1/(0.5 * srate));
   atcoef=exp(-1/(attime * srate));
   relcoef=exp(-1/(reltime * srate));
   mix=1;
   gr_meter=1;
-  gr_meter_decadimento = exp(1/(1*srate));
+  gr_meter_decay = exp(1/(1*srate));
   
   
   function doCenterText(ctrX, ctrY, val)(
@@ -64,14 +66,15 @@ function doMouseWheel(slideval,minval,maxval,inc)(
   slideval;
 );
 
-function funzioneslider()(
+function doslidercode()(
  relslider5 = (((((30^((slider5-20)/980))-1)/29)*980)+20);
  gainout = 10^(slider6/20);
- threshold = slider1;
+ thresh = slider1;
+  threshv = exp(thresh * db2log);
   ratio = 8;
-  allineam=0; cratio = ratio;
-  cthreshold = (softknee ? (threshold -3) : threshold);
-  cthresholdv = exp(cthreshold * db2log);
+  allin=0; cratio = ratio;
+  cthresh = (softknee ? (thresh -3) : thresh);
+  cthreshv = exp(cthresh * db2log);
   makeup = 0;
   makeupv = exp((makeup+autogain) * db2log);
   attime = 690 / 1000000;
@@ -83,7 +86,7 @@ function funzioneslider()(
 
 @slider
  
-  funzioneslider(); 
+  doslidercode(); 
  
   
 
@@ -91,41 +94,41 @@ function funzioneslider()(
 
   ospl0 = spl0;
   ospl1 = spl1;
-  abspl0 = abs(spl0);
-  abspl1 = abs(spl1);
-  maximspl = max(abspl0, abspl1);
-  maximspl = maximspl * maximspl;
-  predetector = maximspl + rmscoef * (predetector - maximspl);
-  det = sqrt(max(0,predetector));
+  aspl0 = abs(spl0);
+  aspl1 = abs(spl1);
+  maxspl = max(aspl0, aspl1);
+  maxspl = maxspl * maxspl;
+  runave = maxspl + rmscoef * (runave - maxspl);
+  det = sqrt(max(0,runave));
 
-  oltredb = 2.08136898 * log(det/cthresholdv) * log2db;
-  oltredb = max(0,oltredb);
+  overdb = 2.08136898 * log(det/cthreshv) * log2db;
+  overdb = max(0,overdb);
 
-  oltredb - rundb > 5 ? (averatio = 4;);
+  overdb - rundb > 5 ? (averatio = 4;);
 
-  oltredb > rundb ? (
-    rundb = oltredb + atcoef * (rundb - oltredb);
+  overdb > rundb ? (
+    rundb = overdb + atcoef * (rundb - overdb);
     runratio = averatio + ratatcoef * (runratio - averatio);
   ) : (
-    rundb = oltredb + relcoef * (rundb - oltredb);
+    rundb = overdb + relcoef * (rundb - overdb);
     runratio = averatio + ratrelcoef * (runratio - averatio);
   );
-  oltredb = rundb;
+  overdb = rundb;
   averatio = runratio;
 
-  allineam ? (
+  allin ? (
     cratio = 12 + averatio;
   ) : (
     cratio = ratio;
   );
   
-  gr = -oltredb * (cratio-1)/cratio;
+  gr = -overdb * (cratio-1)/cratio;
   grv = exp(gr * db2log);
   
-  runmax = maxover + relcoef * (runmax - maxover); 
+  runmax = maxover + relcoef * (runmax - maxover);  // highest peak for setting att/rel decays in reltime
   maxover = runmax;
 
-  grv < gr_meter ? gr_meter=grv : ( gr_meter*=gr_meter_decadimento; gr_meter>1?gr_meter=1; );
+  grv < gr_meter ? gr_meter=grv : ( gr_meter*=gr_meter_decay; gr_meter>1?gr_meter=1; );
 
   spl0 *= grv * makeupv * mix;
   spl1 *= grv * makeupv * mix;  
@@ -137,16 +140,16 @@ function funzioneslider()(
   spl1 = spl1*2*gainout*(-1);
 
 
-@gfx 448 210
+@gfx 448 230
 
 gfx_clear=cRed+cGreen*256+cBlue*65536;
 
 gfx_setfont(1,"Arial",14,0);
 
-//sfondo bitmap
-gfx_blit(0,0.5,0,0,0,448,210,0,0,448,210,0,0);
+//display background bitmap
+gfx_blit(0,0.5,0,0,0,448,230,0,0,448,230,0,0);
 
-//mousecap
+//determine which control we're on (if any)
 mouse_cap == 0 ? (
 	slastyt = 0;	
 	slasty = 0;
@@ -160,8 +163,7 @@ mouse_cap == 0 ? (
 );
 
 gfx_r=gfx_g=gfx_b=0;
-
-//Thresholdold knob
+//do the Threshold knob
 mouseon == 1 ? (
   mouse_cap > 0 ? ( 
   	diff = (abs(slastyt - saveY)/3);
@@ -177,7 +179,7 @@ gfx_blit(2,1,slider1 * 0.075-1.65,0,0,81,81,44,36,59,59,0,0);
 doCenterText(74,110, slider1);
 
 
-//Gain knob
+//do the Gain knob
 mouseon == 2 ? (
   mouse_cap > 0 ? (
   	diff = (abs(slasty - saveY)/5);
@@ -196,7 +198,7 @@ doCenterText(188,110, slider6);
 
 
 
-//Release Knob
+//do the Release slider Rotation
 mouseon == 6 ? (
   mouse_cap > 0 ? (
      mouse_y > saveY ? slider5 = max(20,slider5 -(abs(slasty - saveY)*5));
@@ -212,6 +214,21 @@ mouseon == 6 ? (
 gfx_blit(1,1,slider5 * 0.004591,0,0,81,81,272,36,59,59,0,0);
 doCenterText(300,110, relslider5);
 
+
+
+/*do the Release slider Horizontal
+mouseon == 6 ? (
+  mouse_cap > 0 ? (
+    slider5 = max(20,min((mouse_x - 292)*7.73,1000));
+    mouse_cap == 2 ? slider5 = 250;      
+  ):(
+    slider5 = doMouseWheel(slider5,20,1000,val);
+  );
+);
+gfx_blit(0,1,0,96,288,20,30,282 + slider5*.1292,96,20,30,-96,-288);
+doCenterText(388,89, slider5); */
+
+//do the meter
   gr_meter *= exp(1/30); gr_meter>1?gr_meter=1; // decay meter here so if the audio processing stops it doesnt "stick"
   gfx_r=0;gfx_g=0;gfx_b=0.6; gfx_a=1;
   
@@ -220,7 +237,14 @@ doCenterText(300,110, relslider5);
   gfx_y=150;
   gfx_x=max(425 + log10(gr_meter)*xscale,25);
   gfx_rectto(425,170);
-
-  funzioneslider();
+/*
+  gfx_r=gfx_g=gfx_b=0;
+  gfx_a=1;
+  gfx_x=390; gfx_y=176;
+ doCenterText(388,180, spl0);
+  gfx_drawnumber(log10(gr_meter)*(-1)*20,1);
+*/
+//Call function to execute code that was originally in @slider section
+  doslidercode();
   
  
